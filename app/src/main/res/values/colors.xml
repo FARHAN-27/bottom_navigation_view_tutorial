@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple">#F30B8A</color>
+    <color name = "cardview_dark_background">#CFFF62</color>
+    <color name ="asmani">#0DEDCA</color>
+    <color name = "halka_asmani">#47C580</color>
 </resources>

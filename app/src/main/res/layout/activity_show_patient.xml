@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context=".Home_fragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Home fragment "
-        android:textStyle="bold"
-        android:textSize="50dp"
-        />
+    tools:context=".show_patient">
 
     <Button
-        android:id="@+id/showPatientListBtn"
+        android:id="@+id/showPatientBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="40dp"
         android:text="show patient list"
         >
 
     </Button>
 
+   <ListView
+       android:divider="#BC2020"
+       android:id="@+id/listViewId"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
 
-
-
-
-
-
+   </ListView>
 
 
 

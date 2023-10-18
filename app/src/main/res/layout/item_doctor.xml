@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
-        app:cardBackgroundColor="#E500F1"
+        app:cardBackgroundColor="#CDA1CF"
         app:cardElevation="10dp"
         android:layout_margin="5dp"
         >
@@ -24,9 +24,10 @@
                >
                <ImageView
                    android:id="@+id/imageView"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:src="@drawable/ic_launcher_background">
+
+                   android:layout_width="100dp"
+                   android:layout_height="150dp"
+                   android:src="@drawable/doctor">
                </ImageView>
 
 
@@ -42,12 +43,13 @@
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:background="#EF1556">
+                   android:background="#4DCCDF">
                    <TextView
                        android:id="@+id/nameTxtView"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="Rokon"
+                       android:textAlignment="center"
                        android:textSize="30dp"
                        android:textColor="#EDF2FDFD">
 
@@ -58,16 +60,41 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_marginTop="20dp"
-                   android:background="#47F833">
+                   android:orientation="vertical"
+                   android:background="#C0CDCB">
                    <TextView
                        android:id="@+id/degreeTxtView"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="CSE"
+                       android:textAlignment="center"
                        android:textSize="30dp"
                        android:textColor="#EDF2FDFD">
 
                    </TextView>
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="20dp"
+                   android:orientation="vertical"
+                   android:background="#13C5A9">
+                   <Button
+                       android:id="@+id/addBtn"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="get Appointment"
+                       android:textAlignment="center"
+                       android:textSize="25dp"
+                       android:background="#09EDE2"
+                       android:textColor="#FCECEFEF">
+
+                   </Button>
+
+
                </LinearLayout>
 
 

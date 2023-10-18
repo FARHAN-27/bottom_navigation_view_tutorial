@@ -12,11 +12,14 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView ;
     Toolbar toolbar ;
 
-    TextView title_fragment ;
+    TextView title_fragment , header_title;
 
 
     private  void loadFragment(Fragment fragment)
@@ -44,11 +47,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FirebaseApp.initializeApp(this) ;
 
         drawerLayout = findViewById(R.id.drawer_layout) ;
         navigationView = findViewById(R.id.navigation_view) ;
         toolbar = findViewById(R.id.toolbar) ;
         title_fragment = findViewById(R.id.title_fragment) ;
+        header_title = findViewById(R.id.header_title_txt) ;
+//        header_title.setText("Rokon");
+
+
+
+
+
 
         loadFragment(new Home_fragment());
 
@@ -62,14 +73,18 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout.addDrawerListener(toggle);
 
+
+
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
 
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId() ;
+
 
                 if(id==R.id.Home_id)
                 {
@@ -95,6 +110,11 @@ public class MainActivity extends AppCompatActivity {
                 else if(id == R.id.logout_id)
                 {
                     // go to login activity :
+
+                    FirebaseAuth.getInstance().signOut();
+                    finish() ;
+                    Intent intent = new Intent(getApplicationContext(), login.class) ;
+                    startActivity(intent);
 
 
                 }

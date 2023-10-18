@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "737434808028",
+    "firebase_url": "https://telemedicine-e9881-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "telemedicine-e9881",
+    "storage_bucket": "telemedicine-e9881.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737434808028:android:0f5e962892d01bf157ce19",
+        "android_client_info": {
+          "package_name": "com.example.bottom_navigation_view_tutorial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXzo_j3DVn2jSfVT7kFYptFxFL9lTMOm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737434808028:android:cf161f839bbfc3b457ce19",
+        "android_client_info": {
+          "package_name": "com.example.firebase_tutorial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXzo_j3DVn2jSfVT7kFYptFxFL9lTMOm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
