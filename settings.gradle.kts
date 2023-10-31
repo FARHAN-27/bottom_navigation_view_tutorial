@@ -10,6 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://storage.zego.im/maven") } // Corrected
+        maven { url = uri("https://www.jitpack.io") } // Corrected
+
+
     }
 }
 

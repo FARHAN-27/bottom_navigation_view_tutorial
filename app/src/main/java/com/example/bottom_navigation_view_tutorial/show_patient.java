@@ -36,33 +36,55 @@ public class show_patient extends AppCompatActivity {
         showPatientBtn = findViewById(R.id.showPatientBtn) ;
         listViewId = findViewById(R.id.listViewId) ;
 
-//        FirebaseApp.initializeApp(getApplicationContext()) ;
-        FirebaseDatabase database = FirebaseDatabase.getInstance() ;
-        DatabaseReference databaseReference = database.getReference().child("Patient") ;
-
         patientList = new ArrayList<Patient>() ;
-        patientList.add(new Patient("rokon","21","rokon@gmail.com","123456") ) ;
-
+        patientList.add(new Patient("Kufu Mia","31","kufu@gmail.com","123456") ) ;
         patientAdapter  = new patientListViewAdapter(show_patient.this,patientList) ;
 
-        Log.d("check_d","faile to access database") ;
 
-        System.out.println("eorjeroejeojroejoejefldjfdrle") ;
+
+//        FirebaseApp.initializeApp(getApplicationContext()) ;
+
+         databaseReference = FirebaseDatabase.getInstance().getReference("Patient");
+//        String patient_id = databaseReference.push().getKey() ;
+
+
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                patientList.clear() ;
                 for(DataSnapshot dataSnapshot : snapshot.getChildren())
                 {
-                    Patient patient = snapshot.getValue(Patient.class) ;
+//                    Patient patient = dataSnapshot.child("Patient").getValue(Patient.class) ;
+//                    if(patient!=null)
+//                    {
+//                        patientList.add(patient) ;
+//                        Log.d("new_inside_DB","Patient" + patient.toString()) ;
+//                    }
+                    String name = dataSnapshot.child("name").getValue(String.class) ;
+                    String age = dataSnapshot.child("age").getValue(String.class) ;
+                    String email = dataSnapshot.child("email").getValue(String.class) ;
+                    String password = dataSnapshot.child("password").getValue(String.class) ;
+                    Patient patient = new Patient(name,age,email,password) ;
                     patientList.add(patient) ;
                 }
+//                Log.d("new_inside_DB","Patient list " + patientList.toString()) ;
+//                patientAdapter.notifyDataSetChanged();
                 listViewId.setAdapter(patientAdapter);
+
+
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                listViewId.setAdapter(patientAdapter);
+                Log.d("DBError"," cann't access " + error.toString()) ;
             }
         }) ;
+
+
+
+
+//        listViewId.setAdapter(patientAdapter);
     }
+
+
 }

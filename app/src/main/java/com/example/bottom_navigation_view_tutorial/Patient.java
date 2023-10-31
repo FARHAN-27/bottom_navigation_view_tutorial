@@ -1,6 +1,14 @@
 package com.example.bottom_navigation_view_tutorial;
 
 public class Patient {
+    private  String name , age , email,password ;
+    public Patient(String name , String age , String email, String password)
+    {
+        this.name =name ;
+        this.age = age ;
+        this.email = email ;
+        this.password = password ;
+    }
     public String getName() {
         return name;
     }
@@ -33,12 +41,6 @@ public class Patient {
         this.password = password;
     }
 
-    private  String name , age , email,password ;
-    public Patient(String name , String age , String email, String password)
-    {
-        this.name =name ;
-        this.age = age ;
-        this.email = email ;
-        this.password = password ;
-    }
+
+
 }

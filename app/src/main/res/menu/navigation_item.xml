@@ -4,7 +4,8 @@
     <item
             android:id="@+id/Home_id"
             android:title="Home"
-            android:icon="@drawable/baseline_home_24"/>
+            android:icon="@drawable/baseline_home_24"
+        android:iconTint="@color/halka_asmani"/>
 
     <item
         android:id="@+id/Setting_id"
@@ -12,11 +13,38 @@
         android:icon="@drawable/baseline_settings_24"/>
     <item
         android:id="@+id/Appointment_id"
-        android:title="Appointment"/>
+        android:title="Appointment"
+        android:icon="@drawable/baseline_people_24"/>
+    <item
+        android:id="@+id/bowser_id"
+        android:title="Internet browser"
+        android:icon="@drawable/baseline_open_in_browser_24"
+        android:iconTint="@color/purple"
+        />
 
     <item
+        android:id="@+id/schedul_id"
+        android:title="Schedule"
+        android:icon="@drawable/baseline_next_plan_24"/>
+
+
+    <item
+        android:id="@+id/messenger_id"
+        android:title="messenger"
+        android:icon="@drawable/baseline_message_24"/>
+    <item
+        android:id="@+id/googleMapId"
+        android:title="Google Maps"
+        android:icon="@drawable/baseline_location_searching_24"
+        android:iconTint="#29F8DD"
+        >
+
+    </item>
+    <item
         android:id="@+id/logout_id"
-        android:title="Log Out"/>
+        android:title="Log Out"
+        android:icon="@drawable/baseline_logout_24"/>
+
 
 
 

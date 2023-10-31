@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,8 +17,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class signUp extends AppCompatActivity {
 
@@ -58,6 +62,7 @@ public class signUp extends AppCompatActivity {
             public void onClick(View view) {
 
                userRegistration() ;
+
             }
         });
     }
@@ -68,13 +73,14 @@ public class signUp extends AppCompatActivity {
         String age = ageEdtTxt.getText().toString().trim() ;
         String email = SupEmailEdtTxt.getText().toString().trim() ;
         String password = SupPasswordEdtTxt.getText().toString().trim() ;
-        Patient  patient  = new Patient(name,age,email,password) ;
+        Patient  patient_info  = new Patient(name,age,email,password) ;
 
         FirebaseDatabase database = FirebaseDatabase.getInstance() ;
-        DatabaseReference databaseReference = database.getReference().child("Patient");
+        DatabaseReference databaseReference = database.getReference("Patient");
         String patient_id = databaseReference.push().getKey() ;
-        databaseReference.child(patient_id).setValue(patient) ;
+        databaseReference.child(patient_id).setValue(patient_info) ;
         Toast.makeText(getApplicationContext(), "saved user data successfully", Toast.LENGTH_SHORT).show();
+
 
 
     }
@@ -117,6 +123,8 @@ public class signUp extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),"Please give all information ",Toast.LENGTH_SHORT).show() ;
         }
+
+
     }
 
 }

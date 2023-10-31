@@ -3,29 +3,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     tools:context=".Home_fragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home fragment "
-        android:textStyle="bold"
-        android:textSize="50dp"
-        />
+        android:background="@color/white">
 
-    <Button
-        android:id="@+id/showPatientListBtn"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/showPatientListBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="show patient list"
+            android:textColor="@color/asmani"
+            >
+
+        </Button>
+
+        <Button
+            android:id="@+id/gallaryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Gallary"
+            >
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="show patient list"
-        >
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/medicineEdtTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="search medcine"
+            android:textSize="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
 
-    </Button>
+        </EditText>
+        <Button
+            android:id="@+id/searchMedicineBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="search medicine"
+            android:textColor="@color/asmani"
+            android:layout_marginStart="50dp"
+
+            >
+
+
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/medicineDescriptionTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="medicine description here "
+            android:textSize="20dp">
+
+        </TextView>
+
+    </LinearLayout>
+
 
 
 

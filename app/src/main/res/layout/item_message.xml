@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <LinearLayout
+       android:layout_margin="5dp"
+       android:id="@+id/messegeBoxId"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       >
+       <TextView
+           android:id="@+id/senderOrReceiverNameTxtView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textAlignment="center"
+           android:textSize="12dp"
+           android:background="#9BC5BE"
+           android:text="sender or receiver name">
+
+       </TextView>
+
+
+           <TextView
+               android:id="@+id/messageTxtView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="17dp"
+               android:textColor="@color/black"
+               android:text="here will be shown message">
+
+           </TextView>
+
+
+   </LinearLayout>
+
+</LinearLayout>

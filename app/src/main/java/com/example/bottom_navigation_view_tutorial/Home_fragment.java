@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
@@ -19,6 +21,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -77,11 +81,38 @@ public class Home_fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home_fragment, container, false);
 
         showPatientListBtn = view.findViewById(R.id.showPatientListBtn) ;
+
+        EditText medicineEdtTxt = view.findViewById(R.id.medicineEdtTxt) ;
+        Button searchMedicineBtn = view.findViewById(R.id.searchMedicineBtn) ;
+        Button gallaryBtn = view.findViewById(R.id.gallaryBtn) ;
+        TextView medicineDescriptionTxtView = view.findViewById(R.id.medicineDescriptionTxtView) ;
+
+
+
+
+        // unfinished button work .
+        searchMedicineBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String medicine = medicineEdtTxt.getText().toString().trim() ;
+                // find some infromation about this medicine in this block and then show description
+                medicineDescriptionTxtView.setText("here is the description about this medcine");
+            }
+        });
+
         showPatientListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity().getApplicationContext(),show_patient.class) ;
 
+                startActivity(intent);
+            }
+        });
+
+        gallaryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), Gallary.class) ;
                 startActivity(intent);
             }
         });

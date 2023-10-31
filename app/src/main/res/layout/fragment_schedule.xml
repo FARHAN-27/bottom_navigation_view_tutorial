@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".scheduleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+       <EditText
+           android:id="@+id/agendaEditTxt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:hint="   enter agenda     "
+           android:textSize="20dp"
+           android:inputType="text">
+
+       </EditText>
+       <EditText
+           android:id="@+id/dateEdtTxt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:hint="   enter date    "
+           android:textSize="20dp"
+           android:inputType="date">
+
+       </EditText>
+       <EditText
+           android:id="@+id/timeEdtTxt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:hint="   enter time     "
+           android:textSize="20dp"
+           android:inputType="time">
+
+       </EditText>
+       <Button
+           android:id="@+id/addNewScheduleBtn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="add new Schedule"
+           android:textSize="20dp"
+           >
+
+       </Button>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="schedules"
+            android:textAlignment="center"
+            android:textSize="20dp">
+
+        </TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/scheduleShowRecycleViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

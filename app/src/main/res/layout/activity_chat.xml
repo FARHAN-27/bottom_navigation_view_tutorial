@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat"
+    android:orientation="vertical">
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+           android:layout_marginBottom="20dp"
+           android:layout_marginStart="5dp"
+           android:layout_marginEnd="5dp">
+           <EditText
+               android:id="@+id/messageEdtTxt"
+               android:layout_width="320dp"
+               android:layout_height="match_parent"
+               android:hint="type messages"
+               >
+
+           </EditText>
+           <Button
+               android:id="@+id/sendBtn"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="send"
+               >
+
+           </Button>
+
+       </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messegeRecyclerViewId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

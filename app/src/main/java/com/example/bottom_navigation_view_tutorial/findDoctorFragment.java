@@ -90,7 +90,7 @@ public class findDoctorFragment extends Fragment {
             doctorRecyclerViewAdapter doctorAdapter = new doctorRecyclerViewAdapter
                     (getActivity().getApplicationContext(), doctorList);
 
-            recyclerView.setAdapter(doctorAdapter);
+            recyclerView.setAdapter(doctorAdapter) ;
         }
         catch (Exception e)
         {

@@ -6,4 +6,12 @@
     <color name = "cardview_dark_background">#CFFF62</color>
     <color name ="asmani">#0DEDCA</color>
     <color name = "halka_asmani">#47C580</color>
+    <color name = "medium_green">#0AE46D</color>
+    <color name = "red">#EF0A12</color>
+    <color name = "yellow">#DAED09</color>
+    <color name = "misti">#EF7707</color>
+    <color name = "blue">#062CEF</color>
+    <color name = "light_green">#05F1A6</color>
+    <color name = "more_light_greent">#5AC5AA</color>
+
 </resources>

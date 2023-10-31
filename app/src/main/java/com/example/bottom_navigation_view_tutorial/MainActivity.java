@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -30,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout ;
     NavigationView navigationView ;
     Toolbar toolbar ;
+    TextView title_fragment ;
 
-    TextView title_fragment , header_title;
 
 
     private  void loadFragment(Fragment fragment)
@@ -52,13 +53,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout) ;
         navigationView = findViewById(R.id.navigation_view) ;
         toolbar = findViewById(R.id.toolbar) ;
-        title_fragment = findViewById(R.id.title_fragment) ;
-        header_title = findViewById(R.id.header_title_txt) ;
-//        header_title.setText("Rokon");
-
-
-
-
+        title_fragment = findViewById(R.id.fragment_title);
 
 
         loadFragment(new Home_fragment());
@@ -81,9 +76,12 @@ public class MainActivity extends AppCompatActivity {
                 new NavigationView.OnNavigationItemSelectedListener() {
 
 
+
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId() ;
+
 
 
                 if(id==R.id.Home_id)
@@ -105,6 +103,23 @@ public class MainActivity extends AppCompatActivity {
                     title_fragment.setText("Doctors");
 
                     loadFragment(new findDoctorFragment());
+
+                }
+                else if(id==R.id.schedul_id)
+                {
+                    title_fragment.setText("Schedule");
+                    loadFragment(new scheduleFragment());
+                }
+                else if(id==R.id.messenger_id)
+                {
+                    title_fragment.setText("Members in Messenger");
+                    loadFragment(new messageFragment());
+
+                }
+                else if(id==R.id.googleMapId)
+                {
+                    Intent intent = new Intent(getApplicationContext(), googleMapActivity.class) ;
+                    startActivity(intent);
 
                 }
                 else if(id == R.id.logout_id)
